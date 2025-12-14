@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>DTU Calculator</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="logoDTU.png" alt="Logo DTU" />
+      <h1>DTU Calculator</h1>
+      <h2>&copy; Ngo Huu Thuan</h2>
+    </header>
+    <div class="container">
+      <div class="inputScore">
+        <div class="subject s1">
+          <input
+            type="number"
+            id="subject1"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 1 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent1"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s2">
+          <input
+            type="number"
+            id="subject2"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 2 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent2"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s3">
+          <input
+            type="number"
+            id="subject3"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 3 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent3"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s4">
+          <input
+            type="number"
+            id="subject4"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 4 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent4"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s5">
+          <input
+            type="number"
+            id="subject5"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 5 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent5"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s6">
+          <input
+            type="number"
+            id="subject6"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 6 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent6"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+        <div class="subject s7">
+          <input
+            type="number"
+            id="subject7"
+            class="diemMH"
+            min="0"
+            max="10"
+            placeholder="Nhập cột điểm 7 (0 - 10)"
+          />
+          <input
+            type="number"
+            id="subPercent7"
+            class="tsDiem"
+            min="0"
+            max="100"
+            placeholder="Nhập % trọng số điểm (0-100)"
+          />
+        </div>
+      </div>
+      <div class="BtnCal">
+        <div class="chonGPA">
+          <select id="gpaRemain">
+            <option value="-1" disabled selected>
+              Chọn GPA bạn muốn đạt được
+            </option>
+            <option value="9.5">A+</option>
+            <option value="8.5">A</option>
+            <option value="8.0">A-</option>
+            <option value="7.5">B+</option>
+            <option value="7.0">B</option>
+            <option value="6.5">B-</option>
+            <option value="6.0">C+</option>
+            <option value="5.5">C</option>
+            <option value="4.5">C-</option>
+            <option value="4.0">D</option>
+          </select>
+        </div>
+        <div class="btnTinh">
+          <button id="BtnGPA" class="Btn">Tính GPA môn học</button>
+          <button id="BtnRemainGPA" class="Btn">Tính điểm để đạt được</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>

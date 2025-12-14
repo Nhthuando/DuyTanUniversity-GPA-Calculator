@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+}
+.header {
+  background-color: #aa2b1d;
+  color: whitesmoke;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+.container {
+  width: 90%;
+  height: 660px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+.inputScore {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.subject {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.subject input {
+  flex: 1 1 50%;
+  min-width: 0;
+  padding: 15px;
+  border: 3px solid #aa2b1d;
+  border-radius: 20px;
+}
+
+/* Remove default up/down arrows on number inputs */
+/* Chrome, Edge, Safari */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.BtnCal {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 3px solid #aa2b1d;
+  border-radius: 20px;
+  padding: 15px;
+}
+.btnTinh {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.btnTinh button {
+  margin-top: 15px;
+  background-color: #aa2b1d;
+  color: whitesmoke;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+.chonGPA {
+  margin: auto;
+}
+select {
+  padding: 10px;
+  border: 3px solid #aa2b1d;
+  border-radius: 20px;
+}
+.CalGPA {
+  margin-top: 65px;
+}
+.header img {
+  width: 200px;
+  height: 60px;
+}
+.header h1 {
+  margin-top: 10px;
+}
+.header h2 {
+  margin-top: 15px;
+}
+/* On small screens, stack the two inputs vertically */
+@media (max-width: 520px) {
+  .subject {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
