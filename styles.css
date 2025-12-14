@@ -21,7 +21,6 @@ body {
   text-align: center;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
 }
 .header {
   display: flex;

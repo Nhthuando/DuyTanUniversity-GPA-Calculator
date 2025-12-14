@@ -7,22 +7,16 @@ function tinhDiem() {
   let tongTS = 0;
   for (let i = 0; i < inpDiem.length; i++) {
     if (inpDiem[i].valueAsNumber > 10 || inpDiem[i].valueAsNumber < 0) {
-      Swal.fire({
-        title: "ERROR!",
-        text: "Vui lòng nhập điểm môn học từ 0 tới 10 ",
-        icon: "error",
-        confirmButtonText: "Sửa lại",
-      });
-      return -1;
+      return {
+        diemTong: -1,
+        tongTrongSo: -1,
+      };
     }
     if (inpTsDiem[i].valueAsNumber > 100 || inpTsDiem[i].valueAsNumber < 0) {
-      Swal.fire({
-        title: "ERROR!",
-        text: "Vui lòng nhập trọng số điểm từ 0 tới 100 ",
-        icon: "error",
-        confirmButtonText: "Sửa lại",
-      });
-      return -1;
+      return {
+        diemTong: -2,
+        tongTrongSo: -2,
+      };
     }
   }
   for (let i = 0; i < inpDiem.length; i++) {
@@ -41,6 +35,24 @@ dsBtn[0].addEventListener("click", function () {
   let msg = "";
   let msg1 = "";
   let kqua = tinhDiem();
+  if (kqua.diemTong == -1) {
+    Swal.fire({
+      title: "ERROR!",
+      text: "Vui lòng nhập điểm môn học từ 0 tới 10 ",
+      icon: "error",
+      confirmButtonText: "Sửa lại",
+    });
+    return;
+  }
+  if (kqua.diemTong == -2) {
+    Swal.fire({
+      title: "ERROR!",
+      text: "Vui lòng nhập trọng số điểm từ 0 tới 100 ",
+      icon: "error",
+      confirmButtonText: "Sửa lại",
+    });
+    return;
+  }
   let diemHT = kqua.diemTong;
   let trongsoHT = kqua.tongTrongSo;
   if (diemHT == 0) {
@@ -114,6 +126,24 @@ dsBtn[0].addEventListener("click", function () {
 });
 dsBtn[1].addEventListener("click", function () {
   let kQua = tinhDiem();
+  if (kQua.diemTong == -1) {
+    Swal.fire({
+      title: "ERROR!",
+      text: "Vui lòng nhập điểm môn học từ 0 tới 10 ",
+      icon: "error",
+      confirmButtonText: "Sửa lại",
+    });
+    return;
+  }
+  if (kQua.diemTong == -2) {
+    Swal.fire({
+      title: "ERROR!",
+      text: "Vui lòng nhập trọng số điểm từ 0 tới 100 ",
+      icon: "error",
+      confirmButtonText: "Sửa lại",
+    });
+    return;
+  }
   let diemHT = kQua.diemTong;
   let tsHT = kQua.tongTrongSo;
   if (tsHT >= 100) {
