@@ -1,6 +1,6 @@
-const inpDiem = document.querySelectorAll(".diemMH");
-const inpTsDiem = document.querySelectorAll(".tsDiem");
-const dsBtn = document.querySelectorAll(".Btn");
+const dsBtn = document.querySelectorAll(".btn");
+let inpDiem = document.querySelectorAll(".diemMH");
+let inpTsDiem = document.querySelectorAll(".tsDiem");
 const selectBox = document.querySelector("#gpaRemain");
 const kq = document.getElementById("kqa");
 kq.innerText = "Vui lòng nhập điểm";
@@ -13,6 +13,8 @@ function updateKq() {
   kq.innerText = ketQua.diemTong.toFixed(2);
 }
 function tinhDiem() {
+  inpDiem = document.querySelectorAll(".diemMH");
+  inpTsDiem = document.querySelectorAll(".tsDiem");
   let tongTsDiem = 0;
   let tongTS = 0;
   for (let i = 0; i < inpDiem.length; i++) {
@@ -46,7 +48,44 @@ for (let i = 0; i < inpDiem.length; i++) {
     inpTsDiem[i].addEventListener("input", updateKq);
   }
 }
-dsBtn[0].addEventListener("click", function () {
+
+function themCotDiem() {
+  const place = document.querySelector(".container .inputScore");
+  const newDiv = document.createElement("div");
+  newDiv.classList.add("subject");
+  const newInp1 = document.createElement("input");
+  const newInp2 = document.createElement("input");
+  newInp1.classList.add("diemMH");
+  newInp2.classList.add("tsDiem");
+  newInp1.type = "number";
+  newInp2.type = "number";
+  newInp1.placeholder = "Nhập cột điểm  (0 - 10)";
+  newInp2.placeholder = "Nhập % trọng số điểm (0-100)";
+  newInp1.addEventListener("input", updateKq);
+  newInp2.addEventListener("input", updateKq);
+  newDiv.appendChild(newInp1);
+  newDiv.appendChild(newInp2);
+  place.appendChild(newDiv);
+}
+function xoaCotDiem() {
+  const place = document.querySelector(".container .inputScore");
+  const dongCuoi = place.lastElementChild;
+  if (dongCuoi) {
+    place.removeChild(dongCuoi);
+    updateKq();
+  } else {
+    Swal.fire({
+      title: "ERROR!",
+      text: "Hết sạch cột điểm, không thể xóa! ",
+      icon: "error",
+      confirmButtonText: "Chấp nhận",
+    });
+    return;
+  }
+}
+dsBtn[0].addEventListener("click", themCotDiem);
+dsBtn[1].addEventListener("click", xoaCotDiem);
+dsBtn[2].addEventListener("click", function () {
   let kQua = tinhDiem();
   if (kQua.diemTong == -1) {
     Swal.fire({

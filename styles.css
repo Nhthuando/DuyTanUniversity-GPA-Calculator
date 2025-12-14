@@ -45,18 +45,9 @@ body {
   opacity: 0.95;
 }
 .container {
-  width: 90%;
-  height: 700px;
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin: auto;
-}
-.container {
   width: min(920px, 95%);
   background-color: #fff;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px auto;
@@ -97,12 +88,12 @@ input[type="number"]::-webkit-inner-spin-button {
   border-radius: 20px;
   padding: 15px;
 }
-.btnTinh {
+.btnAD {
   display: flex;
-  gap: 20px;
-  justify-content: center;
+  justify-content: space-between;
 }
-.btnTinh button {
+.btn {
+  min-width: 200px;
   margin-top: 15px;
   background-color: #aa2b1d;
   color: whitesmoke;
@@ -125,9 +116,7 @@ select {
   width: 220px;
   max-width: 100%;
 }
-.btnTinh {
-  gap: 12px;
-}
+
 .btnTinh button {
   min-width: 160px;
 }
