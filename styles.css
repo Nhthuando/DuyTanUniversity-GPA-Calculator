@@ -46,7 +46,7 @@ body {
 }
 .container {
   width: 90%;
-  height: 660px;
+  height: 700px;
   background-color: #fff;
   padding: 10px;
   border-radius: 8px;
@@ -92,6 +92,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   border: 3px solid #aa2b1d;
   border-radius: 20px;
   padding: 15px;
@@ -130,7 +131,17 @@ select {
 .btnTinh button {
   min-width: 160px;
 }
-
+.diemSub {
+  border: 3px solid #aa2b1d;
+  width: 220px;
+  height: 35px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  text-align: center;
+  padding-top: 5px;
+  font-weight: 750;
+  font-size: medium;
+}
 @media (max-width: 768px) {
   .header img {
     height: 48px;
