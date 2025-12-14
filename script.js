@@ -173,7 +173,7 @@ dsBtn[1].addEventListener("click", function () {
     Swal.fire({
       title: "Rất tiếc!",
       text:
-        "Dù làm được 10 điểm bạn vẫn không thể đạt được mức " + txtSelect.text,
+        "Dù làm được 10 điểm bạn vẫn không thể đạt được GPA " + txtSelect.text,
       imageUrl: "cryingIcon.webp",
       imageWidth: 100,
       imageHeight: 100,
@@ -183,7 +183,7 @@ dsBtn[1].addEventListener("click", function () {
   } else if (diemRemain <= 0) {
     Swal.fire({
       title: "Chúc mừng!",
-      text: "Bạn đã đạt được mức " + txtSelect.text + " sẵn rồi!",
+      text: "Bạn đã đạt được GPA " + txtSelect.text + " sẵn rồi!",
       imageUrl: "smileIcon.jpg",
       imageWidth: 350,
       imageHeight: 200,
@@ -196,7 +196,7 @@ dsBtn[1].addEventListener("click", function () {
       text:
         "Bạn cần hoàn thành các cột còn lại ít nhất " +
         diemRemain +
-        " để đạt " +
+        " điểm để đạt " +
         txtSelect.text,
       icon: "warning",
       confirmButtonText: "OK",
