@@ -23,6 +23,28 @@ body {
   justify-content: space-around;
   gap: 20px;
 }
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+}
+.header img {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+.header h1 {
+  font-size: 1.6rem;
+  margin-right: 6px;
+}
+.header h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
 .container {
   width: 90%;
   height: 660px;
@@ -31,6 +53,14 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: auto;
+}
+.container {
+  width: min(920px, 95%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
 }
 .inputScore {
   display: flex;
@@ -91,23 +121,75 @@ select {
   border: 3px solid #aa2b1d;
   border-radius: 20px;
 }
-.CalGPA {
-  margin-top: 65px;
+.chonGPA select {
+  width: 220px;
+  max-width: 100%;
 }
-.header img {
-  width: 200px;
-  height: 60px;
+.btnTinh {
+  gap: 12px;
 }
-.header h1 {
-  margin-top: 10px;
+.btnTinh button {
+  min-width: 160px;
 }
-.header h2 {
-  margin-top: 15px;
+
+@media (max-width: 768px) {
+  .header img {
+    height: 48px;
+  }
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 16px;
+  }
+  .subject {
+    gap: 8px;
+  }
+  .subject input {
+    padding: 12px;
+  }
+  .chonGPA select {
+    width: 100%;
+  }
 }
-/* On small screens, stack the two inputs vertically */
+
 @media (max-width: 520px) {
   .subject {
     flex-direction: column;
     gap: 8px;
+    align-items: stretch;
   }
+  .subject input {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .btnTinh {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btnTinh button {
+    width: 100%;
+    min-width: 0;
+  }
+  .header {
+    gap: 8px;
+  }
+  .header img {
+    height: 40px;
+  }
+  .header h1 {
+    font-size: 1.1rem;
+  }
+  .header h2 {
+    display: none;
+  }
+  .CalGPA {
+    margin-top: 30px;
+  }
+}
+.CalGPA {
+  margin-top: 65px;
 }
