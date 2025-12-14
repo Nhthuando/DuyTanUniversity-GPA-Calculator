@@ -192,11 +192,10 @@ dsBtn[1].addEventListener("click", function () {
     });
   } else {
     Swal.fire({
-      title: diemRemain,
-      text:
+      title:
         "Bạn cần hoàn thành các cột còn lại ít nhất " +
         diemRemain +
-        " điểm để đạt " +
+        " điểm để được " +
         txtSelect.text,
       icon: "warning",
       confirmButtonText: "OK",
